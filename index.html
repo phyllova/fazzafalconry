@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fazza Championship Falconry</title>
+    <meta name="description" content="Vote for your favorite falconry contestant at the Fazza Championship Falconry website. Login using your credentials and cast your vote for the best falconer. Join the excitement and support the champions!">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.5.0/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#"><img src="assets/images/falco.png" alt="Fazza Championship Logo"></a>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="#">الرئيسية</a></li>
+                <li><a href="#votingSection">التصويت</a></li>
+                <li><a href="#">المتسابقون</a></li>
+                <li><a href="#">اتصل بنا</a></li>
+            </ul>
+        </nav>
+            <img src="assets/images/header.JPG" alt="Header Image">
+    </header>
+    <div class="header-text">
+        <h1>Welcome to Fazza Championship Falconry 2023</h1>
+        <p>Vote for your favorite falconry contestant and support the champions of the Fazza Championship. Join the excitement and cast your vote!</p>
+        <p class="announcement">Voting is now open! Show your support for the falconers and choose your champion.</p>
+    </div>
+    <div class="vote-now">
+        <a href="#votingSection" class="vote-button">Vote Now</a>
+    </div>
+    <div class="contestants">
+        <div class="contestant">
+            <img src="assets/images/contestant3.jpg" alt="Contestant 1">
+            <button class="voteButton" onclick="showVoteDialog(1)">Vote</button>
+        </div>
+        <div class="contestant">
+            <img src="assets/images/contestant2.jpg" alt="Contestant 2">
+            <button class="voteButton" onclick="showVoteDialog(2)">Vote</button>
+        </div>
+        <div class="contestant">
+            <img src="assets/images/contestant1.jpg" alt="Contestant 3">
+            <button class="voteButton" onclick="showVoteDialog(3)">Vote</button>
+        </div>
+        <!-- Add more contestants as needed -->
+    </div>
+
+    <div id="voteDialog" class="dialog">
+        <div class="dialog-content">
+            <span class="close" onclick="closeVoteDialog()">&times;</span>
+            <h2>Enter Your Credentials to Vote</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br>
+            <button onclick="submitVote()">Vote</button>
+        </div>
+    </div>
+</body>
+</html>
