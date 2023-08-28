@@ -80,9 +80,9 @@ img {
 
 /* Styling for announcement */
 .announcement {
-    font-size: 18px;
+    margin-top: 10px;
+    font-size: 16px;
     font-weight: bold;
-    color: #FF5733; /* Choose your color */
 }
 
 /* Add these styles to your existing style.css file */
@@ -216,16 +216,6 @@ img {
     z-index: 2; /* Place the content above the overlay */
     padding: 20px;
     color: #fff; /* Adjust the text color */
-}
-
-.hero-content h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 18px;
-    margin-bottom: 30px;
 }
 
 .hero-button {
