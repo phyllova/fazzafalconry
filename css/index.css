@@ -270,3 +270,7 @@ header hr {
   color: white;
   text-shadow: 0.5px 0.5px 1px black;
 }
+.hero-video {
+    width: 100%;
+    height: auto;
+}
