@@ -191,17 +191,31 @@ img {
 
 /* Hero banner styles */
 .hero-banner {
-    background-image: url('assets/images/header.JPG'); /* Replace with your hero image */
-    background-size: cover;
-    background-position: center;
+    position: relative;
+}
 
-    text-align: center;
-    padding: 150px 0;
+.hero-video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the overlay color and opacity */
+    z-index: 1; /* Ensure the overlay is above the video */
 }
 
 .hero-content {
-    max-width: 600px;
-    margin: 0 auto;
+    position: relative;
+    z-index: 2; /* Place the content above the overlay */
+    padding: 20px;
+    color: #fff; /* Adjust the text color */
 }
 
 .hero-content h1 {
